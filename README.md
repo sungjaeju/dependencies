@@ -52,3 +52,8 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+task copyDependencies(type: Copy) {
+   from configurations.compileClasspath
+   into 'dependencies'
+	 duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
