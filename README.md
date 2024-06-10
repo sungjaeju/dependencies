@@ -48,8 +48,7 @@ dependencies {
   	implementation fileTree(dir: 'dependencies', include: ['*.jar'])
 	compileOnly files('libs/lombok-1.18.32.jar')
 	annotationProcessor files('libs/lombok-1.18.32.jar')
-	annotationProcessor files('libs/org.springframework.boot:spring-boot-configuration-processor')
-  
+ 	annotationProcessor files('libs/spring-boot-configuration-processor-3.2.6.jar')
 }
 
 tasks.named('test') {
