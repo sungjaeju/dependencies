@@ -46,9 +46,11 @@ dependencies {
 	// implementation 'org.glassfish.jaxb:jaxb-runtime:4.0.5'
  
   	implementation fileTree(dir: 'dependencies', include: ['*.jar'])
-	compileOnly files('libs/lombok-1.18.32.jar')
-	annotationProcessor files('libs/lombok-1.18.32.jar')
- 	annotationProcessor files('libs/spring-boot-configuration-processor-3.2.6.jar')
+	// compileOnly files('libs/lombok-1.18.32.jar')
+	annotationProcessor files(
+		'dependencies/lombok-1.18.32.jar', 
+		'dependencies/spring-boot-configuration-processor-3.2.6.jar'
+	)
 }
 
 tasks.named('test') {
